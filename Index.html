@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sipwithbha</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  /* Container that clips the iframe */
+  .frame-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Shift the iframe up so the top banner is pushed out of view,
+     and make it taller so the bottom doesn't leave a gap */
+  iframe {
+    position: absolute;
+    top: -5px;          /* adjust this value to match the banner height */
+    left: 0;
+    width: 100%;
+    height: calc(100vh + 40px);
+    border: none;
+  }
+
+  /* Optional: a white bar to cover any leftover sliver at the top */
+  .cover-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #ffffff;
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+
+  <div class="frame-wrapper">
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbzDO_2L0gC7dR57hjT25ZQH-cmd0waNc6pj14sJZE6IMc_ceY58fs9CczVn4YIW9IJjiw/exec"
+      title="sipwithbha">
+    </iframe>
+    <div class="cover-bar"></div>
+  </div>
+
+</body>
+</html>
